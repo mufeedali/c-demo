@@ -1,7 +1,7 @@
 #ifndef STRING_UTILS_H
 #define STRING_UTILS_H
 
-#include "utils.h" // Depends on utils.h for string_length
+#include "utils.h"
 
 /**
  * Concatenates two strings into a destination buffer

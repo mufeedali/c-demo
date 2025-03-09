@@ -1,31 +1,29 @@
-#include "utils.h"
+// utils.c
 #include <stdio.h>
+#include <string.h>
+#include "utils.h"
 
-/**
- * Adds two integers
- */
 int add(int a, int b) {
     return a + b;
 }
 
-/**
- * Subtracts second integer from first
- * Now with improved handling of negative results
- */
 int subtract(int a, int b) {
-    int result = a - b;
-    // Special handling for negative results
-    if (result < 0) {
-        printf("Warning: Result is negative (%d)\n", result);
-    }
-    return result;
+    return a - b;
 }
 
-/**
- * Returns the length of a string
- * Now with debug output
- */
+
 int string_length(const char* str) {
-    int length = 0;
-    printf("Debug: Calculating length of string\n");
-    while (str[length] != 
+    printf("String length debug: String is '%s'\n", str); //Added debug output
+    return strlen(str);
+}
+
+void reverse_string(char* str) {
+    int len = strlen(str);
+    int i, j;
+    char temp;
+    for (i = 0, j = len - 1; i < j; i++, j--) {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+    }
+}
