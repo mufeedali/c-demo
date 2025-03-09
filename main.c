@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "utils.h"
 #include "math_operations.h"
 
@@ -13,7 +14,15 @@ int main() {
     printf("Square of %d is %d\n", a, square(a));
     
     char str[] = "Hello";
+    printf("Original string: %s\n", str);
     printf("Length of '%s' is %d\n", str, string_length(str));
+    
+    // Test the new reverse_string function
+    char str_to_reverse[20];
+    strcpy(str_to_reverse, "Reverse Me");
+    printf("Before reverse: %s\n", str_to_reverse);
+    reverse_string(str_to_reverse);
+    printf("After reverse: %s\n", str_to_reverse);
     
     return 0;
 }
