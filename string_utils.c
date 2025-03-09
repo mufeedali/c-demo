@@ -5,6 +5,7 @@
 #include "string_utils.h"
 
 void string_concat(char* dest, const char* src1, const char* src2) {
+    printf("testing some changes");
     strcpy(dest, src1);
     strcat(dest, src2);
 }
