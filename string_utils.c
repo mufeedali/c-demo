@@ -6,6 +6,7 @@
 
 void string_concat(char* dest, const char* src1, const char* src2) {
     printf("testing some changes");
+    printf("testing further");
     strcpy(dest, src1);
     strcat(dest, src2);
 }
